@@ -1,0 +1,207 @@
+/* Basic Settings */
+/* Basic Settings */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Slab', sans-serif;
+    background-image: url('profile/background.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  @font-face {
+    font-family: 'Super'; /* ชื่อฟอนต์ที่คุณกำหนด */
+    src: url('fonts/SuperBoom-EaGve.otf') format('woff1'),
+          url('fonts/SuperBoom-OVO4P.ttf') format('woff');
+    font-weight: 400; /* น้ำหนักฟอนต์ *//* รูปแบบฟอนต์ */
+  }
+  @font-face {
+    font-family: 'Hex'; /* ชื่อฟอนต์ที่คุณกำหนด */
+    src: url('fonts/Hexenkotel-7Op7B.ttf') format('woff2');
+    font-weight: 400; /* น้ำหนักฟอนต์ */
+    font-style: normal; /* รูปแบบฟอนต์ */
+  }
+    /* Title */
+    .title{
+      justify-content: center;
+      align-items: center;
+      width: 200px;
+      left: 18%;
+      top:100px;
+      margin-bottom: 40px;
+      font-family: 'Super';
+      font-size: 80px; /* กำหนดขนาดฟอนต์ */
+      font-weight: 400; /* น้ำหนักฟอนต์: 400 (ปกติ), 700 (ตัวหนา) */
+      color: #ff00d9;
+      -webkit-text-stroke: 1px rgb(255, 255, 255);
+      text-shadow: 4px 4px 5px rgba(211, 0, 211, 0.7); /* เพิ่มเงา */
+    }
+  
+  .title1{
+    /* not used */
+    position: absolute;
+    top:150px;
+    left: 45%;
+    font-family: 'Demo';
+    font-size: 80px; /* กำหนดขนาดฟอนต์ */
+    font-weight: 400; /* น้ำหนักฟอนต์: 400 (ปกติ), 700 (ตัวหนา) */
+    color: #d338a4;
+    -webkit-text-stroke: 2px black;
+  }
+
+  
+  /* Lobby Container */
+  .lobby-container {
+    width: 700px;
+    height: 450px; /* Adjusted height */
+    background-color: rgba(255, 255, 255, 0.15); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+  }
+  
+  /* Room List Title Inside Container */
+  .room-list-title {
+    font-size: 24px;
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    margin-bottom: 10px;
+    position: absolute;
+    top: 0; /* Adjusted to place it within the container */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+  }
+  
+  /* Room List */
+  .room-list {
+    flex-grow: 1;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.25); /* Slightly transparent black */
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 40px; /* Space below the title */
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Buttons */
+  .button-group {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button {
+    width: 150px;
+    padding: 15px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #dddddd;
+  }
+.button-create-room{
+  background-color: #b1b1b1; 
+  transform: scale(1.05);
+}
+  
+  /* Back Button */
+  .back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-family: "Hex";
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #14ac0f; /* Light red */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .back-button:hover {
+    background-color: #007b00; 
+    transform: scale(1.05);
+  }
+
+/* responsive part */
+
+/* Responsive for Mobile Devices */
+@media (max-width: 600px) {
+  .lobby-container {
+    width: 90%;
+    height: auto;
+    padding: 10px;
+  }
+
+  .room-list-title {
+    font-size: 18px;
+    top: 10px;
+  }
+
+  .room-list {
+    padding: 5px;
+  }
+
+  .button-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .back-button {
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+}
+
+/* Responsive for Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .lobby-container {
+    width: 80%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .room-list-title {
+    font-size: 20px;
+  }
+
+  .button {
+    width: 180px;
+    padding: 12px;
+    font-size: 15px;
+  }
+}

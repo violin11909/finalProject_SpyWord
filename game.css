@@ -1,0 +1,204 @@
+#start-game-button {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #28a745;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  }
+  
+  #start-game-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+
+  #back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px 20px;
+    font-family: "Hex";
+    font-weight: bold;
+    font-size: 22px;
+    color: #ffffff;
+    background-color: #14ac0f; /* Light red */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  #back-button:hover {
+    background-color: #1f6300; 
+    transform: scale(1.05);
+  }
+  
+  .word-box {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f8f9fa;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+  
+  .word-box p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  #your-word-display {
+    font-weight: bold;
+    font-size: 20px;
+    color: #007bff;
+  }
+  
+  /* ปรับตำแหน่งของ message-box ให้อยู่ด้านล่าง */
+  .message-box {
+    position: absolute;
+    left: 140px;
+    bottom: 10px;
+    width: 220px; /* ความกว้างของกรอบ */
+    height: 60px; /* ความสูงของกรอบ */
+    background-image: url('profile/textshow01.png'); /* ใช้ภาพกรอบที่คุณให้ */
+    background-size: contain; /* ปรับให้รูปกรอบอยู่ในขนาดที่เหมาะสม */
+    background-repeat: no-repeat; /* ไม่ให้รูปซ้ำ */
+    background-position: center; /* วางรูปตรงกลาง */
+    display: flex; /* ใช้ Flexbox สำหรับจัดตำแหน่งข้อความ */
+    align-items: center; /* จัดข้อความให้อยู่กลางแนวตั้ง */
+    justify-content: center; /* จัดข้อความให้อยู่กลางแนวนอน */
+    color: #000; /* สีข้อความ */
+    font-size: 14px; /* ขนาดฟอนต์ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    padding: 10px; /* เพิ่ม Padding */
+    line-height: normal; /* ความสูงของบรรทัด */
+    box-sizing: border-box; /* นับ Padding ในขนาดกรอบ */
+    z-index: 10; /* ทำให้กรอบอยู่เหนือองค์ประกอบอื่น */
+    border: none; /* ไม่มีขอบ */
+    overflow: hidden; /* ซ่อนข้อความที่ล้นกรอบ */
+    text-overflow: ellipsis; /* ใส่ ... หากข้อความล้น */
+    white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
+    word-wrap: break-word; /* ตัดคำเมื่อข้อความยาวเกินกรอบ */
+    word-break: break-word; 
+  }
+  
+  .message-box.dead {
+    color: red;
+    font-weight: bold;
+  }
+  
+  .vote-button {
+    padding: 10px 15px;
+    background-color: #ff7f50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .vote-button:hover {
+    background-color: #ff6347;
+  }
+  
+  .timer {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #ff0000;
+    font-weight: bold;
+  }
+
+  .grid-container {
+    display: grid;
+    transform: translateX(-0px);  
+    grid-template-columns: 1fr 1fr;
+    column-gap: 400px;
+    row-gap: 10px;
+    width: 80%;
+    height: 90%;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .player-name {
+    position: absolute;
+    color: #000000;
+    width: 120px;
+    height:25px;
+    left: 8px;
+    bottom: 10px;
+    font-size: 20px!important; /* กำหนดขนาดฟอนต์ */
+    font-weight: 1000!important; 
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-text-stroke: 0.5px rgb(243, 243, 243);
+    text-overflow: ellipsis; /* ใส่ ... หากข้อความล้น */
+    white-space: normal; /* อนุญาตให้ข้อความขึ้นบรรทัดใหม่ */
+    word-wrap: break-word; /* ตัดคำเมื่อข้อความยาวเกินกรอบ */
+    word-break: break-word;
+  }
+
+  .profile-block{
+    position: relative;
+    background-color: #f0f0f0;
+    border: 4px solid #000;
+    border-radius: 15px; /* ขอบมน */
+    width: 400px; /* ความกว้างของสี่เหลี่ยม */
+    height: 150px; /* ความสูงของสี่เหลี่ยม */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงา */
+  }
+  
+  /* responsive part */
+
+/* Responsive for Mobile Devices */
+/* Responsive Design for Mobile Devices */
+@media (max-width: 600px) {
+  .profile-block {
+    width: 80%;
+    margin: 10px auto;
+  }
+  #back-button {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  .word-box {
+    bottom: 5px;
+    right: 5px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr; /* แสดงทีละคอลัมน์ */
+  }
+}
+
+/* Responsive Design for Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .profile-block {
+    width: 40%;
+  }
+  #back-button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr 1fr; /* แสดงสองคอลัมน์ */
+  }
+}

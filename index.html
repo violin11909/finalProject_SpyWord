@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Selection</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="index.css">
+  <script src="index.js" defer></script>
+</head>
+<body>
+  <!-- Audio element for background sound -->
+  <audio id="background-audio" autoplay loop>
+    <source src="profile/music1.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Start Screen -->
+  <div id="start-screen">
+    <div class="result"> </div>
+    <div class="title3"> SPY WORD</div>
+    <div class="glass"> </div>
+    <button class="start-button" onclick="showProfileSelection()">START GAME</button>
+  </div>
+
+  <!-- Profile Selection Screen -->
+  <div id="profile-selection" style="display: none;">
+    <div id="name-input">
+      <h2 class="title4">Enter Your Name</h2>
+      <input type="text" class="player-name2" id="player-name" placeholder="Your Name">
+      <button class="next" onclick="proceedToProfileSelection()">Enter</button>
+      <script>
+        window.onload = function() {
+          document.getElementById('player-name').addEventListener('keydown', function(event) {
+            if (event.key === 'Enter') {
+              proceedToProfileSelection();
+            }
+          });
+        };
+      </script>
+    </div>
+    <div id="profiles" style="display: none; margin-top: 20px;">
+      <h3 class="title4">Select Your Profile</h3>
+      <div>
+        <img src="profile/cat.png" class="profile-option" alt="Cat" onclick="redirectToLobby('profile/cat.png')">
+        <img src="profile/koala.png" class="profile-option" alt="Koala" onclick="redirectToLobby('profile/koala.png')">
+        <img src="profile/pig.png" class="profile-option" alt="Pig" onclick="redirectToLobby('profile/pig.png')">
+        <img src="profile/frog.png" class="profile-option" alt="Frog" onclick="redirectToLobby('profile/frog.png')">
+        <img src="profile/hippo.png" class="profile-option" alt="Hippo" onclick="redirectToLobby('profile/hippo.png')">
+        <img src="profile/tiger.png" class="profile-option" alt="Tiger" onclick="redirectToLobby('profile/tiger.png')">
+        <img src="profile/owl.png" class="profile-option" alt="Owl" onclick="redirectToLobby('profile/owl.png')">
+        <img src="profile/koala2.png" class="profile-option" alt="Koala2" onclick="redirectToLobby('profile/koala2.png')">
+        <img src="profile/capybara.png" class="profile-option" alt="Capybara" onclick="redirectToLobby('profile/capybara.png')">
+        <img src="profile/moodeng.png" class="profile-option" alt="Moodeng" onclick="redirectToLobby('profile/moodeng.png')">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

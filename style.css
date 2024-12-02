@@ -1,0 +1,428 @@
+/* Basic Settings */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('profile/background.jpg'); /* ใส่ URL ของรูปภาพ */
+  background-size: cover; /* ปรับขนาดรูปภาพให้ครอบคลุมพื้นที่ทั้งหมด */
+  background-position: center; /* จัดตำแหน่งรูปภาพให้อยู่ตรงกลาง */
+  background-repeat: no-repeat; /* ไม่ให้รูปภาพซ้ำ */
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-repeat: repeat;
+  justify-content: center;
+  align-items: center;
+}
+@font-face {
+  font-family: 'Demo'; /* ชื่อฟอนต์ที่คุณกำหนด */
+  src: url('fonts/BabyDrakula.ttf') format('woff2');
+  font-weight: 400; /* น้ำหนักฟอนต์ */
+  font-style: normal; /* รูปแบบฟอนต์ */
+}
+@font-face {
+  font-family: 'Hex'; /* ชื่อฟอนต์ที่คุณกำหนด */
+  src: url('fonts/Hexenkotel-7Op7B.ttf') format('woff2');
+  font-weight: 400; /* น้ำหนักฟอนต์ */
+  font-style: normal; /* รูปแบบฟอนต์ */
+}
+@font-face {
+  font-family: 'Winter'; /* ชื่อฟอนต์ที่คุณกำหนด */
+  src: url('fonts/Winter Lemon.ttf') format('woff1'),
+        url('fonts/Winter Lemon.otf') format('woff');
+  font-weight: 400; /* น้ำหนักฟอนต์ *//* รูปแบบฟอนต์ */
+}
+@font-face {
+  font-family: 'Super'; /* ชื่อฟอนต์ที่คุณกำหนด */
+  src: url('fonts/SuperBoom-EaGve.otf') format('woff1'),
+        url('fonts/SuperBoom-OVO4P.ttf') format('woff');
+  font-weight: 400; /* น้ำหนักฟอนต์ *//* รูปแบบฟอนต์ */
+}
+@font-face {
+  font-family: 'Paku'; /* ชื่อฟอนต์ที่คุณกำหนด */
+  src: url('fonts/Pakuintho-BWEP8.ttf') format('wof');
+  font-weight: 700; /* น้ำหนักฟอนต์ *//* รูปแบบฟอนต์ */
+}
+
+.profile-background{
+  display: flex; 
+  position: absolute;
+  left: 30px;
+  bottom: 60px; 
+  background-color: #df9e9e;
+  width: 80px;
+  height: 80px;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.player-list {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.number-background{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 1px; /* ระยะจากมุมบน */
+  left: 1px; 
+  font-size: 14px; /* ขนาดตัวอักษร */
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+}
+.number{
+  color: #f0f0f0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.profile-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 คอลัมน์ แต่ละคอลัมน์มีขนาดเท่ากัน */
+  column-gap: 10px; /* ระยะห่างระหว่างคอลัมน์ */
+  row-gap: 10px; /* ระยะห่างระหว่างแถว */
+  justify-content: center; /* จัดให้อยู่กลางหน้าจอ */
+  margin: 20px auto; /* เพิ่มระยะห่างด้านบน/ล่าง */
+  width: 200px; 
+}
+
+/* Start Screen Styles */
+#start-screen {
+  display: flex;
+  z-index: 2;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.profile-zone {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Player Profile Styles */
+.player-profile {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Middle Zone Styles */
+#middle-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #ffffff;
+  overflow-y: auto;
+}
+
+.start-button:hover {
+  background-color: #be2b2b;
+  transform: scale(1.05);
+}
+
+#profile-selection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+#profile-display img {
+  object-fit: cover;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+
+#selected-profile {
+  object-fit: cover;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  border-radius: 50%;
+}
+
+.profile-input {
+  position: absolute;
+  left: 160px;
+  bottom: 60px;
+  top: 10px;
+  max-width: 200px; 
+  max-height: 50px;/* กำหนดความกว้างสูงสุด */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.profile-display {
+  font-size: 16px;
+  color: #333333;
+}
+
+.message-input {
+  margin-top: 5px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.chat-message {
+  position: relative;
+  bottom: 40px;
+  right: 10px;
+  width: 300px;
+  height: 150px;
+  background: url('profile/box12.png') no-repeat center center;
+  background-size: contain;
+  padding-top: 50px;
+  padding-left: 10px;
+  font-size: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: left;
+  overflow: hidden;
+  word-wrap: break-word;
+  line-height: 1.5;
+}
+
+.message-container-right {
+  position: absolute;
+  top: 20%;
+  left: 100px;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 90px;
+}
+
+.message-container {
+  margin-top: 20px;
+}
+
+/* Back Button Styles */
+#back-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  padding: 10px 20px;
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.message-display {
+  position:absolute;
+  top: 110px;
+  left: 150px;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+  margin-top: 10px;
+  word-wrap: break-word; /* ให้ข้อความที่ยาวเกินไปถูกตัด */
+  overflow-wrap: break-word; /* สำหรับเบราว์เซอร์ที่รองรับคำสั่งนี้ */
+  white-space: normal; /* อนุญาตให้ตัดบรรทัด */
+  width: 200px;
+}
+.message-display2 {
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+  margin-top: 10px;
+  word-wrap: break-word; /* ให้ข้อความที่ยาวเกินไปถูกตัด */
+  overflow-wrap: break-word; /* สำหรับเบราว์เซอร์ที่รองรับคำสั่งนี้ */
+  white-space: normal; /* อนุญาตให้ตัดบรรทัด */
+  width: 200px;
+}
+.message-display3 {
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+  margin-top: 10px;
+  word-wrap: break-word; /* ให้ข้อความที่ยาวเกินไปถูกตัด */
+  overflow-wrap: break-word; /* สำหรับเบราว์เซอร์ที่รองรับคำสั่งนี้ */
+  white-space: normal; /* อนุญาตให้ตัดบรรทัด */
+  width: 200px;
+}
+.message-display4 {
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+  margin-top: 10px;
+  word-wrap: break-word; /* ให้ข้อความที่ยาวเกินไปถูกตัด */
+  overflow-wrap: break-word; /* สำหรับเบราว์เซอร์ที่รองรับคำสั่งนี้ */
+  white-space: normal; /* อนุญาตให้ตัดบรรทัด */
+  width: 200px;
+}
+.message-display5 {
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+  margin-top: 10px;
+  word-wrap: break-word; /* ให้ข้อความที่ยาวเกินไปถูกตัด */
+  overflow-wrap: break-word; /* สำหรับเบราว์เซอร์ที่รองรับคำสั่งนี้ */
+  white-space: normal; /* อนุญาตให้ตัดบรรทัด */
+  width: 200px;
+}
+.message-display6 {
+  flex-direction: column;
+  align-items: center;
+  font-size: 18px;
+  color: #333;
+  margin-left: 10px;
+  margin-top: 10px;
+  word-wrap: break-word; /* ให้ข้อความที่ยาวเกินไปถูกตัด */
+  overflow-wrap: break-word; /* สำหรับเบราว์เซอร์ที่รองรับคำสั่งนี้ */
+  white-space: normal; /* อนุญาตให้ตัดบรรทัด */
+  width: 200px;
+}
+
+.notification {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  text-align: center;
+}
+
+.re {
+  position: fixed;
+  width: 200px;
+  top: 50%;
+  left: 50%;
+  font-size: 18px; /* ขนาดตัวอักษร */
+  font-family: Arial, sans-serif; /* ฟอนต์ */
+  color: #000000; /* สีตัวอักษร */
+  background-color: #f0f0f0; /* สีพื้นหลัง */
+  border: none; /* ไม่มีเส้นขอบ */
+  border-radius: 8px; /* ขอบมน */
+  cursor: pointer; /* เปลี่ยนเมาส์เป็นรูปมือ */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+  transition: all 0.3s ease; /* ทำให้การเปลี่ยนแปลงลื่นไหล */
+}
+
+/* เอฟเฟกต์เมื่อเมาส์ชี้ */
+.re:hover {
+  background-color: #b2beca; /* เปลี่ยนสีพื้นหลัง */
+  transform: scale(1.05); /* ขยายเล็กน้อย */
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* 2 คอลัมน์ แต่ละคอลัมน์มีขนาดเท่ากัน */
+  column-gap: 50px; /* ระยะห่างระหว่างคอลัมน์ */
+  row-gap: 5px; /* ระยะห่างระหว่างแถว */
+  justify-content: center; /* จัดให้อยู่กลางหน้าจอ */
+  margin: 20px auto; /* เพิ่มระยะห่างด้านบน/ล่าง */
+  width: 200px; 
+}
+.button {
+  padding: 15px 30px; /* เพิ่มระยะห่างภายในปุ่ม */
+  width: 200px;
+  font-size: 18px; /* ขนาดตัวอักษร */
+  font-family: Arial, sans-serif; /* ฟอนต์ */
+  color: #000000; /* สีตัวอักษร */
+  background-color: #f0f0f0; /* สีพื้นหลัง */
+  border: none; /* ไม่มีเส้นขอบ */
+  border-radius: 8px; /* ขอบมน */
+  cursor: pointer; /* เปลี่ยนเมาส์เป็นรูปมือ */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* เพิ่มเงา */
+  transition: all 0.3s ease; /* ทำให้การเปลี่ยนแปลงลื่นไหล */
+}
+/* เอฟเฟกต์เมื่อเมาส์ชี้ */
+.button:hover {
+  background-color: #b2beca; /* เปลี่ยนสีพื้นหลัง */
+  transform: scale(1.05); /* ขยายเล็กน้อย */
+}
+
+.run-game, .run-game2{
+  position: fixed; /* ทำให้องค์ประกอบอยู่ในตำแหน่งคงที่บนหน้าจอ */
+  top: 50%; /* กึ่งกลางในแนวตั้ง */
+  left: 50%; /* กึ่งกลางในแนวนอน */
+  transform: translate(-50%, -50%);
+  font-family: 'Winter';
+  font-size: 48px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+  color: hsl(0, 100%, 49%);
+  -webkit-text-stroke: 0.2px black;
+}
+
+.timer {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.player-list{
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.gamestarted{
+  position: fixed;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.crown-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px; /* ขนาดของมงกุฎ */
+  height: 30px;
+  z-index: 10; /* ให้อยู่บนสุด */
+}
+
+.player {
+  position: relative; /* ใช้เพื่อให้ตำแหน่งของมงกุฎสัมพันธ์กับผู้เล่น */
+}

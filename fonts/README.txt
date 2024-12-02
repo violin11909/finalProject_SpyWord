@@ -1,0 +1,3 @@
+To learn more about the font family and its license, visit https://www.fontmirror.com/babydrakulademo
+
+BabyDrakulaDemo, a playful yet slightly sinister typeface, blends childlike charm with gothic undertones.  Its rounded letters hint at innocence, while subtly pointed serifs and bold weight add a touch of darkness.  Perfect for projects needing a whimsical yet slightly spooky vibe, from Halloween cards to children''s fantasy books.

@@ -1,0 +1,81 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lobby</title>
+  <link rel="stylesheet" href="lobby.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="lobby.js" defer></script>
+</head>
+<body>
+  <button class="back-button" onclick="goBacktoIndex()">Back</button>
+  <div class="title">LOBBY</div>
+  <div class="lobby-container">
+    <h2 class="room-list-title">Room List</h2>
+    <div id="room-list" class="room-list">
+      <p>No rooms available.</p>
+    </div>
+    <div class="button-group">
+      <button class="button create-room" onclick="createRoom()">Create Room</button>
+      <button class="button refresh-room" onclick="refreshRooms()">Refresh</button>
+      <button class="button create-word" onclick="openCreateWordPrompt()">Create New Word</button> 
+
+    </div>
+  </div>
+</body>
+</html> -->
+
+<!-- version1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lobby</title>
+  <link rel="stylesheet" href="lobby.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="lobby.js" defer></script>
+</head>
+<body>
+
+  <!-- Audio element for background sound -->
+  <audio id="background-audio" autoplay loop>
+    <source src="profile/music2.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <button class="back-button" onclick="goBacktoIndex()">Back</button>
+  <div class="title">LOBBY</div>
+  <div class="lobby-container">
+    <h2 class="room-list-title">Room List</h2>
+    <div id="room-list" class="room-list">
+      <!-- Room items will be dynamically added here -->
+      <p>No rooms available.</p>
+    </div>
+    <div class="button-group">
+      <select id="category-select">
+        <option value="all">All Categories</option>
+        <option value="ผลไม้">ผลไม้</option>
+        <option value="ตัวละคร">ตัวละคร</option>
+        <option value="กีฬา">กีฬา</option>
+        <option value="อาหารไทย">อาหารไทย</option>
+        <option value="อาหารญี่ปุ่น">อาหารญี่ปุ่น</option>
+        <option value="อาหารตะวันตก">อาหารตะวันตก</option>
+        <option value="อนิเมะ">Anime</option>
+        <option value="NBA Team">NBA Team</option>
+        <option value="สัตว์">สัตว์</option>
+      </select>
+      
+      <button class="button create-room" onclick="createRoom()">Create Room</button>
+      <button class="button refresh-room" onclick="refreshRooms()">Refresh</button>
+      <button class="button create-word" onclick="openCreateWordPrompt()">Create New Word</button> 
+
+    </div>
+  </div>
+</body>
+</html>
+
