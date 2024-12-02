@@ -40,14 +40,17 @@
   .glass{
     position: absolute;
     background-image: url('profile/glass.png'); 
-    bottom: 300px;
-    left: 450px;/* ใส่ URL ของรูปภาพ */
+    bottom: 53vh; /* ใช้ vh แทน px เพื่อปรับตามความสูงหน้าจอ */
+    left: 35%; /* ตั้งตำแหน่งกึ่งกลางหน้าจอ */
+    transform: translateX(-50%); /* ย้ายให้อยู่กึ่งกลางแนวนอน */
     object-fit: cover;
-    width: 200px; /* กำหนดขนาดของกล่อง */
-    height: 200px;
-    background-size: cover; /* ปรับขนาดรูปภาพให้ครอบคลุมพื้นที่ทั้งหมด */
-    background-position: center; /* จัดตำแหน่งรูปภาพให้อยู่ตรงกลาง */
-    background-repeat: no-repeat; /
+    width: 10vw; /* ใช้ vw เพื่อปรับขนาดตามความกว้างหน้าจอ */
+    max-width: 200px; /* จำกัดขนาดสูงสุด */
+    height: 10vw; /* ให้สัดส่วนกล่องเท่ากับความกว้าง */
+    max-height: 200px; /* จำกัดขนาดสูงสุด */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   /* Start Button Styles */
