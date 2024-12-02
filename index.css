@@ -176,9 +176,6 @@
 }
 
 /* responsive */
-
-/* Responsive for Mobile Devices */
-/* Responsive Design for Mobile Devices */
 @media (max-width: 600px) {
     .title3 {
       font-size: 40px;
@@ -202,6 +199,47 @@
   
   /* Responsive Design for Tablets */
   @media (min-width: 601px) and (max-width: 1024px) {
+    .title3 {
+      font-size: 60px;
+    }
+    .start-button {
+      font-size: 30px;
+      padding: 15px 30px;
+    }
+    #name-input {
+      width: 80%;
+      margin: 0 auto;
+    }
+    .profile-option {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+/* Responsive for Mobile Devices */
+@media (max-width: 600px) and (hover: none) and (pointer: coarse){
+    .title3 {
+      font-size: 40px;
+    }
+    .start-button {
+      font-size: 20px;
+      padding: 10px 20px;
+    }
+    #name-input {
+      width: 90%;
+      margin: 0 auto;
+    }
+    .player-name2 {
+      font-size: 16px;
+    }
+    .profile-option {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  
+  /* Responsive Design for Tablets */
+  @media (min-width: 601px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
     .title3 {
       font-size: 60px;
     }

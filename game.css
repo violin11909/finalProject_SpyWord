@@ -170,8 +170,7 @@
   /* responsive part */
 
 /* Responsive for Mobile Devices */
-/* Responsive Design for Mobile Devices */
-@media (max-width: 600px) {
+@media (max-width: 600px) and (hover: none) and (pointer: coarse) {
   .profile-block {
     width: 80%;
     margin: 10px auto;
@@ -190,7 +189,7 @@
 }
 
 /* Responsive Design for Tablets */
-@media (min-width: 601px) and (max-width: 1024px) {
+@media (min-width: 601px) and (max-width: 1024px) and (hover: none) and (pointer: coarse) {
   .profile-block {
     width: 40%;
   }
